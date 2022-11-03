@@ -8,6 +8,7 @@ import {
 import { Loading } from "./src/components/Loading";
 import { SignIn } from "./src/screens/SignIn";
 import { AuthContextProvider } from "./src/contexts/authContext";
+import { New } from "./src/screens/New";
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -18,7 +19,7 @@ export default function App() {
   return (
     <NativeBaseProvider>
       <AuthContextProvider>
-        {fontsLoaded ? <SignIn /> : <Loading />}
+        {fontsLoaded ? <New /> : <Loading />}
         <StatusBar
           backgroundColor="transparent"
           barStyle="light-content"
